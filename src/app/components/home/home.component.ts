@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Firestore } from '@angular/fire/firestore';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import * as dayjs from 'dayjs';
+import { FirestoreService } from 'src/app/services/firestore.service';
 
 @Component({
   selector: 'app-home',
@@ -6,11 +11,61 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  constructor(
+    private _fsService: FirestoreService,
+    private _snackBar: MatSnackBar
+  ) {}
 
   ngOnInit(): void {}
 
+  /*   newsletterForm = new FormGroup({
+    subscriberName: new FormControl<string | null>(''),
+    subscriberEmail: new FormControl<string | null>('', [
+      Validators.required,
+      Validators.email,
+    ]),
+  }); */
+
+  subscriberEmail = new FormControl<string | null>('', [
+    Validators.required,
+    Validators.email,
+  ]);
+
   onClickSubscribe() {
-    alert('Under construction!');
+    if (this.subscriberEmail.invalid) {
+      this.subscriberEmail.markAllAsTouched();
+    } else {
+      let _collectionName: string = 'elist';
+      let _payload: object = {
+        created_at: dayjs().format('YYYY-MM-DD HH:mm:ss'),
+        subscriber_name: '',
+        subscriber_email: this.subscriberEmail.value ?? '',
+      };
+      let _req = this._fsService.addDocument(_collectionName, _payload);
+      _req
+        .then((res) => {
+          let _snackBarRef = this._snackBar.open(
+            'Saved successfully \u2713',
+            '',
+            {
+              duration: 3000,
+            }
+          );
+          _snackBarRef
+            .afterDismissed()
+            .subscribe((res) => this.subscriberEmail.reset());
+        })
+        .catch((err) => {
+          console.log('Error message =>', err);
+          alert('An error occured!');
+        });
+    }
+  }
+
+  getErrorMessage() {
+    if (this.subscriberEmail.hasError('required')) {
+      return 'Enter an e-mail address';
+    }
+    return this.subscriberEmail.hasError('email') ? 'Not a valid e-mail' : '';
   }
 }

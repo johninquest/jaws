@@ -6,7 +6,7 @@
 
 $mytheme-primary: mat.define-palette(mat.$blue-grey-palette, 900); // #263238
 $mytheme-accent: mat.define-palette(mat.$grey-palette, 300); // #e0e0e0
-$mytheme-warn: mat.define-palette(mat.$deep-orange-palette, 200); // #ffab91
+$mytheme-warn: mat.define-palette(mat.$pink-palette, 800); // #ffab91
 
 $mytheme-all: mat.define-light-theme(
   $mytheme-primary,

@@ -24,10 +24,18 @@
           ><mat-icon style="transform: rotate(-25deg)">campaign</mat-icon></span
         >
       </p>
+      <!--  <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput type="txt" />
+      </mat-form-field> -->
       <mat-form-field appearance="outline">
         <mat-label>Enter your e-mail</mat-label>
-        <input matInput type="email" />
+        <input matInput type="email" [formControl]="subscriberEmail" />
+        <mat-error *ngIf="subscriberEmail.invalid">{{
+          getErrorMessage()
+        }}</mat-error>
       </mat-form-field>
+
       <button mat-flat-button color="primary" (click)="onClickSubscribe()">
         Yes, sign me up
       </button>
