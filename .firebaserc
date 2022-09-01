@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "jaief-asong": {
+      "hosting": {
+        "jaief-asong": [
+          "jaief-asong"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "jaief-asong"
+  }
+}

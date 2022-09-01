@@ -1,0 +1,38 @@
+<div class="discography">
+  <iframe
+    style="border-radius: 12px"
+    src="https://open.spotify.com/embed/playlist/4nb7mXFlQ5lW8PICjzHM9T?utm_source=generator"
+    width="100%"
+    height="380"
+    frameBorder="0"
+    allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+  ></iframe>
+</div>
+
+<div class="newsletter">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title style="font-style: italic; font-weight: bold"
+        >BE THE FIRST</mat-card-title
+      >
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        Sign up and be the first to get notified everytime we release new music
+        <span
+          ><mat-icon style="transform: rotate(-25deg)">campaign</mat-icon></span
+        >
+      </p>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter your e-mail</mat-label>
+        <input matInput type="email" />
+      </mat-form-field>
+      <button mat-flat-button color="primary" (click)="onClickSubscribe()">
+        Yes, sign me up
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<app-footer></app-footer>

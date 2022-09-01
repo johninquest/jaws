@@ -1,0 +1,39 @@
+.discography {
+  margin: 3rem 1rem 1rem 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  iframe {
+    width: 55%;
+    @media screen and (max-width: 600px) {
+      width: 95%;
+    }
+  }
+}
+
+.newsletter {
+  margin: 3rem auto 3rem auto;
+  width: 50%;
+  @media screen and (max-width: 600px) {
+    width: 95%;
+  }
+  mat-card {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background: var(--secondary-color);
+    mat-card-content {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      mat-form-field {
+        min-width: 90%;
+      }
+      button {
+        margin: 0.4rem auto auto auto;
+        min-width: 20%;
+      }
+    }
+  }
+}

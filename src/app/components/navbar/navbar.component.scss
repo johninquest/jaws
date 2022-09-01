@@ -1,0 +1,55 @@
+nav {
+  background-color: black;
+  height: 3rem;
+  width: 100%;
+  left: 0;
+  text-align: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+nav ul li {
+  margin: 0;
+  padding: 0;
+  float: left;
+  list-style-type: none;
+  cursor: pointer;
+}
+nav ul li a {
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+nav ul li a:focus {
+  color: var(--secondary-color);
+}
+
+nav ul li a:hover {
+  color: var(--secondary-color);
+}
+
+nav ul li i {
+  text-decoration: none;
+  // padding: 1rem;
+  margin: 1.1rem auto auto 1rem;
+  display: block;
+  color: white;
+  transform: scale(1.2);
+  font-weight: bold;
+}
+
+nav ul li i:focus {
+  color: var(--secondary-color);
+}
+
+nav ul li i:hover {
+  color: var(--secondary-color);
+}
