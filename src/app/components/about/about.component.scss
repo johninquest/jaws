@@ -1,0 +1,25 @@
+.title {
+  margin: 3rem auto 1rem auto;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.content {
+  margin: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    width: 60%;
+    a {
+      font-weight: bold;
+      color: black;
+    }
+    @media screen and (max-width: 600px) {
+      width: 90%;
+    }
+  }
+}
