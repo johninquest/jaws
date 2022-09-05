@@ -22,9 +22,10 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 import { AboutComponent } from './components/about/about.component';
+import { ShopComponent } from './components/shop/shop.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent, FooterComponent, AboutComponent],
+  declarations: [AppComponent, NavbarComponent, HomeComponent, FooterComponent, AboutComponent, ShopComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
