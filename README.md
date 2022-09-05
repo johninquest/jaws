@@ -1,4 +1,6 @@
-# Jaief & Asong
+# <p align="center">Jaief & Asong</p>
+
+### <p align="center">A simple artist website for Jaief & Asong</p>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
 
