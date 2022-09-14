@@ -1,13 +1,13 @@
-.discography {
+.video {
   margin: 3rem 1rem 1rem 1rem;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
 
   iframe {
-    width: 55%;
+    width: 65%;
     @media screen and (max-width: 600px) {
-      width: 95%;
+      width: 100%;
     }
   }
 }

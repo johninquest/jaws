@@ -23,9 +23,10 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 import { AboutComponent } from './components/about/about.component';
 import { ShopComponent } from './components/shop/shop.component';
+import { MusicComponent } from './components/music/music.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent, FooterComponent, AboutComponent, ShopComponent],
+  declarations: [AppComponent, NavbarComponent, HomeComponent, FooterComponent, AboutComponent, ShopComponent, MusicComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
