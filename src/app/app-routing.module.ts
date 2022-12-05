@@ -6,9 +6,9 @@ import { MusicComponent } from './components/music/music.component';
 import { ShopComponent } from './components/shop/shop.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  //  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'about', component: AboutComponent },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'music', component: MusicComponent },
   { path: 'shop', component: ShopComponent },
   { path: '**', component: HomeComponent },
