@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Firestore } from '@angular/fire/firestore';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import * as dayjs from 'dayjs';
 import { FirestoreService } from 'src/app/services/firestore.service';
 
 @Component({
@@ -37,7 +36,7 @@ export class HomeComponent implements OnInit {
     } else {
       let _collectionName: string = 'elist';
       let _payload: object = {
-        created_at: dayjs().format('YYYY-MM-DD HH:mm:ss'),
+        created_at: new Date().toISOString(),
         subscriber_name: '',
         subscriber_email: this.subscriberEmail.value ?? '',
       };
@@ -46,7 +45,7 @@ export class HomeComponent implements OnInit {
         .then((res) => {
           let _snackBarRef = this._snackBar.open(
             'Saved successfully \u2713',
-            '',
+            'OK',
             {
               duration: 3000,
             }

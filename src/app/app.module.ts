@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,14 +26,21 @@ import { ShopComponent } from './components/shop/shop.component';
 import { MusicComponent } from './components/music/music.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent, FooterComponent, AboutComponent, ShopComponent, MusicComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    HomeComponent,
+    FooterComponent,
+    AboutComponent,
+    ShopComponent,
+    MusicComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModules,
     HttpClientModule,
-    FormsModule,
     ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAnalytics(() => getAnalytics()),
